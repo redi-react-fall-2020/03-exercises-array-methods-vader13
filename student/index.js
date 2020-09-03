@@ -1,4 +1,3 @@
-
 // 1)
 // Given a set of numbers, return the additive inverse of each. Each positive becomes negatives, and the negatives become positives.
 
@@ -8,9 +7,8 @@
 // You can assume that all values are integers. Do not mutate the input array/list.
 
 function invert(array) {
-  // TODO 
+  return array.map((i) => (i > 0 ? -i : Math.abs(i)));
 }
-
 
 // 2)
 // Consider an array/list of sheep where some sheep may be missing from their place.
@@ -28,9 +26,8 @@ function invert(array) {
 // The correct answer would be 17.
 
 function countSheeps(arrayOfSheep) {
-  // TODO 
+  return arrayOfSheep.filter((x) => x === true).length;
 }
-
 
 // 3)
 // Number of people in the bus
@@ -42,7 +39,7 @@ function countSheeps(arrayOfSheep) {
 // The second value in the first integer array is 0, since the bus is empty in the first bus stop.
 
 function peopleInBus(busStops) {
-  // Good Luck!
+  return busStops.reduce((total, [enter, exit]) => total + enter - exit, 0);
 }
 
 module.exports = {
